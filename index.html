@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuySmart - Your Price Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <img src="logo2.png" alt="" class="image">
+        <h1>...      BuySmart</h1>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Coupons</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <input type="text" placeholder="Search for products..." />
+        <button>Search</button>
+      </div>
+      <div class="auth-buttons">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <h2>Find the Best Deals & Compare Prices Easily</h2>
+      <p>Your one-stop destination for all the latest offers, price comparisons, and coupons.</p>
+      <a href="#deals" class="btn">Explore Deals</a>
+    </div>
+  </section>
+
+  <!-- Price Tracking Section -->
+  <section class="product-results">
+    <div class="container">
+      <h2 id="searchHeading">Product Search Results</h2>
+      <p id="productInfo">Enter a product name and hit search.</p>
+      <div id="productResults" class="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- Hidden Product Template -->
+  <template id="product-template">
+    <div class="product-card">
+      <img src="" class="product-image">
+      <h3 class="product-title"></h3>
+      <p class="product-price"></p>
+      <a href="#" target="_blank" class="product-link">View on Amazon</a>
+    </div>
+  </template>
+
+  <!-- Trending Deals Section -->
+  <section id="deals" class="deals">
+    <div class="container">
+      <h2 style="color: red;">Trending Deals</h2>
+      <div id="dealsContainer" class="deals-container">
+        <!-- Example deal cards -->
+        <div class="deal-card">
+          <h3>Deal Title 1</h3>
+          <p>Save up to 30% on product 1.</p>
+        </div>
+        <div class="deal-card">
+          <h3>Deal Title 2</h3>
+          <p>Exclusive offer on product 2.</p>
+        </div>
+        <div class="deal-card">
+          <h3>Deal Title 3</h3>
+          <p>Discount on product 3 available now.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coupons & Offers Section -->
+  <section class="coupons">
+    <div class="container">
+      <h2>Coupons & Offers</h2>
+      <div id="couponsContainer" class="coupons-container">
+        <!-- Example coupon cards -->
+        <div class="coupon-card">
+          <h3>Coupon Code: SAVE20</h3>
+          <p>Get 20% off on your purchase.</p>
+        </div>
+        <div class="coupon-card">
+          <h3>Coupon Code: DEAL50</h3>
+          <p>50% off on select items.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nearby-stores">
+    <div class="container">
+      <h2 style="color: red;">Stores Near You</h2>
+      <ul id="storesList">
+        <li>Loading nearby stores...</li> <!-- This will be dynamically replaced -->
+      </ul>
+    </div>
+  </section>
+  
+
+  <!-- Main Content (Features) -->
+  <main class="main-content">
+    <div class="container">
+      <section class="features">
+        <div class="feature">
+          <h3>Compare Prices</h3>
+          <p>Quickly compare prices across various retailers to find the best deals.</p>
+        </div>
+        <div class="feature">
+          <h3>Exclusive Offers</h3>
+          <p>Access special deals and discounts curated just for you.</p>
+        </div>
+        <div class="feature">
+          <h3>Product Reviews</h3>
+          <p>Read genuine reviews and ratings to make informed decisions.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2025 BuySmart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <!-- Include Chart.js from CDN for price history chart (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts.js" type = "module"></script>
+</body>
+</html>

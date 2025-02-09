@@ -1,0 +1,427 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added subtle shadow for header */
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo h1 {
+  color: #e74c3c;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #e74c3c;
+  transform: scale(1.1); /* Added hover effect for better interactivity */
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.search input[type="text"] {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  width: 300px;
+  transition: width 0.3s ease-in-out;
+}
+
+.search input[type="text"]:focus {
+  width: 350px; /* Enlarges search bar when focused */
+  border-color: #e74c3c;
+}
+
+.search button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  background: url('logo.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darken the background image slightly */
+  z-index: 1;
+}
+
+.hero h2, .hero p, .btn {
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
+  z-index: 2;
+  position: relative;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+/* Section Styles */
+.price-tracking,
+.deals,
+.coupons,
+.nearby-stores {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.price-tracking h2,
+.deals h2,
+.coupons h2,
+.nearby-stores h2 {
+  margin-bottom: 1rem;
+}
+
+/* Chart Container for Price History */
+.chart-container {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+/* Deals Cards */
+.deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.deal-card {
+  background-color: #f1f1f1;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.deal-card:hover {
+  transform: scale(1.05);
+}
+
+/* Coupon Cards */
+.coupons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.coupon-card {
+  background-color: #fcf8e3;
+  padding: 1rem;
+  border: 1px dashed #e67e22;
+  border-radius: 5px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.coupon-card:hover {
+  transform: scale(1.05);
+}
+
+/* Nearby Stores List */
+#storesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.feature {
+  flex: 1;
+  min-width: 250px;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature h3 {
+  margin-bottom: 1rem;
+  color: #e74c3c;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+  }
+  .nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .nav.active {
+    display: block;
+  }
+  .mobile-nav-toggle {
+    display: block;
+  }
+  .deals-container, .coupons-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features {
+    flex-direction: column;
+  }
+}
+.logo {
+  display: flex;
+  align-items: center;
+  transform: translateX(-50px); 
+}
+
+.image {
+  height: 100px; 
+  width: auto;
+  margin-left: -60px;
+  margin-right: 15px; 
+  display: block;
+}
+
+/* List of stores */
+.stores-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each store card styling */
+.store-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect on store card */
+.store-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Store name styling */
+.store-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Store type styling */
+.store-type {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Store icon placeholder (optional) */
+.store-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-title {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #e67e22;
+}
+
+.product-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #ff9900;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.auth-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.login-btn {
+  background-color: #f8f8f8;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.signup-btn {
+  background-color: #ff6200;
+  color: white;
+}
+
+.login-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.signup-btn:hover {
+  background-color: #e05500;
+}
